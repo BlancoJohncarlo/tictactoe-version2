@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+canvas { 
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+    background-color:black;
+ }
+ h1{
+    color: white;
+ }
+ 
+.game-container {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(33, 32, 32, 0.8); 
+    
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    max-width: 80%; 
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 4px;
+    max-width: 300px;
+}
+
+.cell {
+    width: 100px;
+    margin-left: 20px;
+    height: 100px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #797272;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.hidden {
+    display: none;
+}
+.text-color{
+    color: white;
+}
+.option-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+
+.options button.clicked {
+    background-color: #fefefe;
+    color: #c0392b;
+}
+.start-button:hover{
+    transition: .5s;
+    background-color: #fefefe;
+    color: #c0392b;
+    
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #FFA500;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
